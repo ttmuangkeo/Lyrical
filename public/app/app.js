@@ -7,12 +7,20 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
             .state('home', {
                 url: '/',
                 templateUrl: 'app/views/home.html',
+            })
+            .state('newArtist', {
+                url: '/newartist',
+                templateUrl: 'app/views/newArtist.html',
                 controller: 'HomeCtrl'
             })
-            .state('artist', {
-                url: '/artist',
-                templateUrl: 'app/views/artist.html',
-                controller: 'ArtistCtrl'
+            .state('newRelease', {
+                url: '/newrelease',
+                templateUrl: 'app/views/newRelease.html',
+                controller: 'HomeCtrl'
+            })
+            .state('newSong', {
+                url: '/newsong',
+                templateUrl: 'app/views/newSong.html',
             })
         $locationProvider.html5Mode(true);
     }])

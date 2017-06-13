@@ -5,7 +5,7 @@ angular.module('myCtrls', ['somethingServices'])
             $http({
                 url: 'https://itunes.apple.com/search?&term=?' + $scope.artist,
                 params: {
-                    limit: 5
+                    limit: 20
                 }
             }).then(function succes(req) {
                 console.log('what is this', req)

@@ -1,4 +1,5 @@
- <div class="container">
+      <header>
+      <div class="container">
         <div id="branding">
           <h1><span class="highlight">Lyrical</span>Music Search</h1>
         </div>
@@ -14,41 +15,34 @@
 
     <section id="showcase">
       <div class="container">
-        <h1>Let Lyrical bring your favorite Music Artist to Life</h1>
+        <h1>Let Lyrical bring your favorite <br> Music Artist to Life</h1>
         <p> Search for your Favorite Music Artist and Songs</p>
       </div>
     </section>
 
-    <section id="newsletter">
-      <div class="container">
-        <h1>Search for your Favorite Artist</h1>
-      </div>
-    </section>
-        <form ng-submit="search()">
-          <input type="text" ng-model='artist' placeholder="Enter Artist Name...">
-          <button type="submit" class="btn btn-info">Search</button>
-        </form>
-
-
-          <h3>New Releases</h3>
     <section id="boxes">
-      <div class="container" ng-repeat="test in test">
-        <div class=col-md-4>
-          <img src="{{test.artworkUrl100}}">
-          <p>{{test.artistName}}</p>
-          <p>{{test.trackName}}</p>
-          <hr>
+      <div class="container">
+        <div class="box">
+        <a href="/newrelease">
+          <img src="./img/radioman.jpg">
+          <h3>New Releases</h3>
+          <p>Check out the new Song releases</p>
+          </a>
         </div>
-<!--         <div class="col-md-4">
+        <div class="box">
+        <a href="/newsong">
           <img src="./img/dj.jpg">
-          <h3>Top Albums of 2017</h3>
-          
+          <h3>Top Songs</h3>
+          <p>top songs</p>
+          </a>
         </div>
-        <div class="col-md-4">
+        <div class="box">
+        <a href="/newartist">
           <img src="./img/guitarist.jpg">
-          <h3>Top Artists of 2017</h3>
-          
-        </div> -->
+          <h3>Top Artists</h3>
+          <p>These are the top artist of 2017</p>
+          </a>
+        </div>
       </div>
     </section>
 

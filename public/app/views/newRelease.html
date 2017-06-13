@@ -1,0 +1,21 @@
+<h1>new release</h1>
+
+    <section id="newsletter">
+      <div class="container">
+        <h1>Search for your Favorite Artist</h1>
+      </div>
+    </section>
+        <form ng-submit="search()">
+          <input type="text" ng-model='artist' placeholder="Enter Artist Name...">
+          <button type="submit" class="btn btn-info">Search</button>
+        </form>
+
+        <h3>New Releases</h3>
+    <section id="boxes">
+      <div class="container" ng-repeat="test in test">
+        <div class=col-md-4>
+          <img src="{{test.artworkUrl100}}">
+          <p>{{test.artistName}}</p>
+          <p>{{test.trackName}}</p>
+          <hr>
+        </div>
