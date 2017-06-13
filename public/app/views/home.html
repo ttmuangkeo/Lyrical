@@ -1,4 +1,17 @@
- <div class="container">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Music Search">
+    <meta name="keywords" content="Lyrical Music Search">
+    <meta name="author" content="">
+    <title>Lyrical | Welcome</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
         <div id="branding">
           <h1><span class="highlight">Lyrical</span>Music Search</h1>
         </div>
@@ -14,17 +27,17 @@
 
     <section id="showcase">
       <div class="container">
-        <h1>Let Lyrical bring your favorite Music Artist to Life</h1>
+        <h1>Let Lyrical bring your favorite <br> Music Artist to Life</h1>
         <p> Search for your Favorite Music Artist and Songs</p>
       </div>
     </section>
 
     <section id="newsletter">
       <div class="container">
-        <h1>Search for your Favorite Artist</h1>
-        <form ng-model="searchTerm">
-          <input type="text" placeholder="Enter Artist Name...">
-          <button type="submit" ng-model="searchTerm" class="button_1">Search</button>
+        <!-- <h1>Search for your Favorite Artist</h1> -->
+        <form>
+          <input type="email" placeholder="Enter Artist Name...">
+          <button type="submit" class="button_1">Search</button>
         </form>
         
       </div>
@@ -32,20 +45,21 @@
 
 
     <section id="boxes">
-      <div class="container" ng-repeat="test in test">
-        <div class=col-md-4>
+      <div class="container">
+        <div class="box">
+          <img src="./img/radioman.jpg">
           <h3>New Releases</h3>
-          <img src="{{test.artworkUrl100}}">
+          <p>Check out the new Song releases</p>
         </div>
-        <div class="col-md-4">
+        <div class="box">
           <img src="./img/dj.jpg">
           <h3>Top Albums of 2017</h3>
-          
+          <p>These are the top albums of 2016</p>
         </div>
-        <div class="col-md-4">
+        <div class="box">
           <img src="./img/guitarist.jpg">
           <h3>Top Artists of 2017</h3>
-          
+          <p>These are the top artist of 2017</p>
         </div>
       </div>
     </section>
@@ -53,3 +67,5 @@
     <footer>
       <p>Tim Muangkeo & Emmeline Aquino, Copyright &copy; 2017</p>
     </footer>
+  </body>
+</html>
