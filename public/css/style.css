@@ -82,9 +82,9 @@ header a:hover{
 /* Showcase */
 #showcase{
   min-height:534px;
-  background:url('../img/rockband.png');
+  background-image: url('../img/rockband.png');
   text-align:center;
-
+  background-position: 20%;
   color:#ffffff;
   background-size: cover;
 }
@@ -124,12 +124,13 @@ header a:hover{
 /* Boxes */
 #boxes{
   margin-top:20px;
+  height: 300px;
 }
 
 #boxes .box{
   float:left;
   text-align: center;
-  width:30%;
+  width:33%;
   padding:10px;
 }
 
