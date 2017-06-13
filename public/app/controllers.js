@@ -1,19 +1,18 @@
 angular.module('myCtrls', ['somethingServices'])
     .controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
-        var searchTerm = 'drake'
-        var track = 'the motto'
+        var artist = 'drake'
         $http({
-        url: 'http://api.musixmatch.com/ws/1.1/matcher.lyrics.get',
+        url: 'http://api.musixmatch.com/ws/1.1/artist.search',
         params: {
         callback: 'callback',
         format: 'json',
             'apikey': 'fdc9ad9d9fa9d41f48a88a72c770f024',
-            'q_artist': searchTerm,
-            'q_track': track 
+            'f_artist_id': '',
+            'q_artist': artist 
         }
     }).then(function succes(req) {
-        console.log('what is this', req)
-        $scope.test = req.data.message.body.lyrics
+        console.log('what is this', req.data.message.body)
+        $scope.test = req.data.message.body.artist_list
     }).catch(function error(err) {
         console.log('what is the erro', err)
     });
