@@ -22,22 +22,24 @@
     <section id="newsletter">
       <div class="container">
         <h1>Search for your Favorite Artist</h1>
-        <form ng-model="searchTerm">
-          <input type="text" placeholder="Enter Artist Name...">
-          <button type="submit" ng-model="searchTerm" class="button_1">Search</button>
-        </form>
-        
       </div>
     </section>
+        <form ng-submit="search()">
+          <input type="text" ng-model='artist' placeholder="Enter Artist Name...">
+          <button type="submit" class="btn btn-info">Search</button>
+        </form>
 
 
+          <h3>New Releases</h3>
     <section id="boxes">
       <div class="container" ng-repeat="test in test">
         <div class=col-md-4>
-          <h3>New Releases</h3>
           <img src="{{test.artworkUrl100}}">
+          <p>{{test.artistName}}</p>
+          <p>{{test.trackName}}</p>
+          <hr>
         </div>
-        <div class="col-md-4">
+<!--         <div class="col-md-4">
           <img src="./img/dj.jpg">
           <h3>Top Albums of 2017</h3>
           
@@ -46,7 +48,7 @@
           <img src="./img/guitarist.jpg">
           <h3>Top Artists of 2017</h3>
           
-        </div>
+        </div> -->
       </div>
     </section>
 
