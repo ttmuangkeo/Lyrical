@@ -81,9 +81,10 @@ header a:hover{
 
 /* Showcase */
 #showcase{
-  min-height:400px;
-  background:url('../img/comp1.jpg') no-repeat;
+  min-height:534px;
+  background:url('../img/rockband.png');
   text-align:center;
+
   color:#ffffff;
   background-size: cover;
 }
