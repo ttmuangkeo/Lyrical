@@ -65,21 +65,3 @@ angular.module('somethingServices', ['ngResource'])
         }
     }])
     //9. adding more alerts
-    .factory('Alerts', [function() {
-        var alerts = [];
-        return {
-            //to access the var alerts. you have to go through your get() function
-            get: function() {
-                //return the internal array
-                return alerts;
-            },
-            add: function(type, msg) {
-                //push into the array whatever type and msg you entered
-                alerts.push({ type: type, msg: msg });
-            },
-            //clear function that wipes the push function entirely. wipes the array
-            clear: function() {
-                alerts = [];
-            }
-        }
-    }]);
