@@ -16,11 +16,17 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
             .state('newRelease', {
                 url: '/newrelease',
                 templateUrl: 'app/views/newRelease.html',
-                controller: 'HomeCtrl'
+                controller: 'musicCtrl'
             })
             .state('newSong', {
                 url: '/newsong',
                 templateUrl: 'app/views/newSong.html',
+                controller: 'HomeCtrl'
+            })
+            .state('lyrics', {
+                url: '/lyrics',
+                templateUrl: 'app/views/lyrics.html',
+                controller: 'lyricsCtrl'
             })
         $locationProvider.html5Mode(true);
     }])

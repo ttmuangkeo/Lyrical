@@ -1,27 +1,23 @@
+<h1>lyrics</h1>
 
 
     <section id="newsletter">
       <div class="container">
-        <h1>Search for music video</h1>
+        <h1>Search for lyrics</h1>
       </div>
     </section>
         <form ng-submit="search()">
           <input type="text" ng-model='artist' placeholder="Enter Artist Name...">
+          <input type="text" ng-model='title' placeholder="Enter song title...">
           <button type="submit" class="btn btn-info">Search</button>
         </form>
 
       
         <div class="container">
-        <div class="row-fluid">
             <div class="col-md-12">
-              <div ng-repeat="test in test">
               <div class="col-md-4">
-              <a target="__blank" href="{{test.previewUrl}}">
-              <p>{{test.trackName}} - {{test.artistName}}</p>
-              <img class="img-responsive" src="{{test.artworkUrl100}}" alt="artwork">
-              </a>
+              <p>{{test.lyrics_body}}</p>
               </div>
               </div>
             </div>
           </div>
-        </div>

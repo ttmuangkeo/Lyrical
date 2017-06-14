@@ -2,11 +2,13 @@ require('dotenv').config();
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
+var SpotifyWebApi = require('spotify-web-api-node')
 
 // JSON web token dependencies, including a secret key to sign the token
 var expressJWT = require('express-jwt');
 var jwt = require('jsonwebtoken');
 var secret = process.env.JWT_SECRET;
+var spotifyApi = new SpotifyWebApi();
 
 var app = express();
 
@@ -34,6 +36,7 @@ app.use(require('morgan')('dev'));
 // });
 
 // POST /api/auth - if authenticated, return a signed JWT
+
 
 app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, 'public/index.html'));

@@ -1,6 +1,8 @@
 var express = require('express');
+var SpotifyWebApi = require('spotify-web-api-node')
 var Favorite = require('../models/favorite');
 var router = express.Router();
+var spotifyApi = new SpotifyWebApi();
 
 router.route('/')
   .get(function(req, res) {
@@ -30,5 +32,6 @@ router.get('/:id', function(req, res) {
     return res.send(user);
   });
 });
+
 
 module.exports = router;
