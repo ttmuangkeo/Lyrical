@@ -26,17 +26,28 @@
 </head>
 
 <body>
+<header>
     <div class="container">
-        
-            </div>
-        <div ui-view></div>
+    <div id="branding">
+    <a href="/">
+    <h1><span class="highlight">Lyrical</span> Music Search</h1>
+    </a>
     </div>
-
-    <a href="/newartist">new artist</a>
-    <a href="/lyrics">lyrics</a>
-    <a href="/newrelease">new release</a>
-    <a href="/newsong">new song</a>
-    <a href="/">home</a>
+    <nav class="navbar-fixed">
+        <ul>
+            <li class="current"><a href="/lyrics">Lyrics</a></li>
+            <li><a href="/newartist">Artist</a></li>
+            <li><a href="/newsong">Songs</a></li>
+            <li><a href="/newrelease">Music Video</a></li>
+        </ul>
+    </nav>
+    </div>
+    </header>
+    <div ui-view></div>
+    </div>
+    <footer class="navbar">
+    <p>Tim Muangkeo & Emmeline Aquino, Copyright &copy; 2017</p>
+</footer>
 </body>
 
 </html>
