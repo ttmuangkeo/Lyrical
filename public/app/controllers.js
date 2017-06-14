@@ -45,5 +45,18 @@ angular.module('myCtrls', ['somethingServices'])
             }).catch(function error (err) {
                 console.log('error bro.', err);
             });
-        };
+            $http({
+                url: 'https://itunes.apple.com/search?&term=?' + $scope.artist,
+                params: {
+                    limit: 20
+                }
+            }).then(function succes(req) {
+                console.log('what is this', req)
+                $scope.test = req.data.results
+            }).catch(function error(err) {
+                console.log('what is the erro', err)
+            });
+
+        }
+
     }])
