@@ -28,6 +28,17 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
                 templateUrl: 'app/views/lyrics.html',
                 controller: 'lyricsCtrl'
             })
+            .state('showsong', {
+                url: '/showsong',
+                templateUrl: 'app/views/showsong.html',
+                controller: 'showSongCtrl'
+            })
+            .state('showartist', {
+                url: '/showartist',
+                templateUrl: 'app/views/showArtist.html',
+                controller: 'showArtistCtrl'
+            })
+
         $locationProvider.html5Mode(true);
     }])
     //4. you should be able to login and be persistent. auth user instead of giving a 404 error

@@ -5,25 +5,19 @@ angular.module('myCtrls', ['somethingServices'])
         $scope.search = function() {
             $http({
                 url: 'https://itunes.apple.com/search?term=' + $scope.artist,
-                    params: {
+                params: {
                     'entity': 'album',
                     'limit': 6,
 
-                    }
+                }
             }).then(function succes(req) {
                 console.log('what is this', req)
                 $scope.test = req.data.results;
             }).catch(function error(err) {
                 console.log('what is the erro', err)
             });
-}
+        }
     }])
-
-
-
-
-
-
 
 .controller('musicCtrl', ['$scope', '$http', function($scope, $http) {
         $scope.search = function() {
@@ -86,4 +80,44 @@ angular.module('myCtrls', ['somethingServices'])
             console.log('error:', err)
         })
     };
-}]);
+}])
+
+.controller('showSongCtrl', ['$scope', '$http', function($scope, $http) {
+        var emptyString = "";
+        var alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+        while (emptyString.length < 2) {
+            emptyString += alphabet[Math.floor(Math.random() * alphabet.length)];
+        }
+        console.log(emptyString)
+        $http({
+            url: 'https://itunes.apple.com/search?term=' + emptyString,
+            params: {
+                'entity': 'musicTrack'
+            }
+        }).then(function success(req) {
+            console.log('random music', req);
+            $scope.test = req.data.results
+        }).catch(function error(req) {
+            console.log('error', req)
+        })
+    }])
+    .controller('showArtistCtrl', ['$scope', '$http', function($scope, $http) {
+        var emptyString = "";
+        var alphabet = "abcdefghijklmnopqrstuvwxyz";
+        while (emptyString.length < 2) {
+            emptyString += alphabet[Math.floor(Math.random() * alphabet.length)];
+        }
+        $http({
+            url: 'https://itunes.apple.com/search?term=' + emptyString,
+            params: {
+                'entity': 'musicArtist',
+                limit: 10
+            }
+        }).then(function success(req) {
+            console.log('random music', req);
+            $scope.test = req.data.results
+        }).catch(function error(req) {
+            console.log('error', req)
+        })
+    }]);
